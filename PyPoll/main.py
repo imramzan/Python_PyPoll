@@ -43,7 +43,9 @@ with open(PyPoll, newline="") as csvfile:
         
     winning_vote_count = max(vote_count)
     winner = unique_candidate[vote_count.index(winning_vote_count)]
-    
+
+#Printing Results in the terminal  
+
 print("-------------------------")
 print("Election Results")   
 print("-------------------------")
@@ -58,9 +60,8 @@ print("The winner is: " + winner)
 print("-------------------------")
 
 # Print to a text file: election_results.txt
-# Output perhaps needs to be rounded to 3 decimal points. Leaving that formatting out for now) 
 
-with open('election_results.txt', 'w') as text:
+with open('pyPoll/election_results.txt', 'w') as text:
     text.write("Election Results\n")
     text.write("---------------------------------------\n")
     text.write("Total Votes: " + str(count) + "\n")
